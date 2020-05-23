@@ -260,6 +260,7 @@ class Scope(QtGui.QMainWindow):
             td_str = '-'.join(str(timediff).split(':')[:2])
             _ = self.df.to_pickle(DATA_FOLDER + self.creation_time.strftime("/pulses_%Y-%m-%d_%H-%M-%S") + "___" + str(self.pcounter) + "___" + td_str + ".pkl")
             print("Saving completed.")
+            #print(self.df.to_string/self.df.stream)
             print()
             print('Number of recorded waveforms:', self.pcounter, "of",self.frame_counter, "total audio frames")
             print('at least', len(self.df[self.df['ptype'] == 'alpha']) ,"alphas and") 
